@@ -1,0 +1,48 @@
+[package]
+name = "sptece"
+version = "0.1.0"
+edition = "2025"
+authors = ["Nirajan Dhakal"]
+description = "A Sparse Tensor Computation Engine (SpTeCE) built for ML/DL in Rust."
+license = "GNU GPLv3"
+
+[workspace]
+members = [
+    "crates/sparse-core",
+    "crates/sparse-csr",
+    "crates/sparse-coo",
+    "crates/sparse-ops",
+    "crates/sparse-autograd",
+    "crates/sparse-nn",
+    "crates/sparse-io",
+]
+
+resolver = "2"
+
+# Workspace-wide dependencies (available to all crates)
+[workspace.dependencies]
+num-traits = "0.2"
+num-derive = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+rayon = "1.10"
+thiserror = "1.0"
+log = "0.4"
+anyhow = "1.0"
+once_cell = "1.20"
+parking_lot = "0.12"
+
+# Workspace profile configurations
+[profile.dev]
+opt-level = 0
+debug = true
+debug-assertions = true
+overflow-checks = true
+lto = false
+
+[profile.release]
+opt-level = 3
+debug = 2
+debug-assertions = false
+overflow-checks = false
+lto = "thin"
+codegen-units = 1

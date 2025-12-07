@@ -1,0 +1,32 @@
+# Compiled files
+/target/
+**/*.rs.bk
+
+# Local configuration files
+/.cargo/config.toml
+/.env
+/.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+**/*.so
+**/*.dylib
+**/*.dll
+
+# Documentation
+/doc/
+/book/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Profiling data
+*.profdata
+*.profraw
+flamegraph.svg

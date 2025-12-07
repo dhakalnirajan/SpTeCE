@@ -1,0 +1,21 @@
+[package]
+name = "sparse-csr"
+version = "0.1.0"
+edition = "2025"
+description = "CSR (Compressed Sparse Row) format for SpTeCE"
+license = "GNU GPLv3"
+
+[dependencies]
+sparse-core = { path = "../sparse-core" }
+num-traits = { workspace = true }
+serde = { workspace = true, optional = true }
+rayon = { workspace = true, optional = true }
+thiserror = { workspace = true }
+
+[features]
+default = []
+parallel = ["dep:rayon"]
+serde = ["dep:serde", "sparse-core/serde"]
+
+[dev-dependencies]
+proptest = "1.0"
