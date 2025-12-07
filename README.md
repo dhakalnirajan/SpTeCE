@@ -1,6 +1,6 @@
 # SpTeCE - Sparse Tensor Computation Engine
 
-[![CI/CD](https://github.com/yourusername/sptece/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/sptece/actions/workflows/ci.yml)
+[![CI/CD](https://github.com/dhakalnirajan/sptece/actions/workflows/ci.yml/badge.svg)](https://github.com/dhakalnirajan/sptece/actions/workflows/ci.yml)
 [![Crates.io](https://img.shields.io/crates/v/sptece.svg)](https://crates.io/crates/sptece)
 [![Documentation](https://docs.rs/sptece/badge.svg)](https://docs.rs/sptece)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
